@@ -38,6 +38,6 @@ jobs:
         echo '---------------------'
         echo STEP TWO OF SECOND JOB
         echo '---------------------'
-    - run: |
-        echo $GITHUB_WORKSPACE
-        pwd
+    - run: pwd
+    - run: echo $GITHUB_WORKSPACE
+    - run: echo $HOME
