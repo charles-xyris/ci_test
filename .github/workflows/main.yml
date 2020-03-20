@@ -27,4 +27,4 @@ jobs:
       run: |
         echo $MY_VAR $FIRST_NAME $LAST_NAME!
         echo END OF JOB
-        
+        ls
