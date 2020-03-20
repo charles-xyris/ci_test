@@ -38,4 +38,4 @@ jobs:
         echo '---------------------'
         echo STEP TWO OF SECOND JOB
         echo '---------------------'
-    - run: ls
+    - run: pwd
