@@ -25,19 +25,6 @@ jobs:
     name: Second Job
     runs-on: ubuntu-latest
     steps:
-    - name: Print another greeting (Second Job)
-      env:
-        MY_VAR: Hi there! My name is
-        FIRST_NAME: Jeb
-        LAST_NAME: Kerman
-      run: |
-        echo $MY_VAR $FIRST_NAME $LAST_NAME!
-        echo END OF JOB
-    - name: Step 2 of Second JOB
-      run: |
-        echo '---------------------'
-        echo STEP TWO OF SECOND JOB
-        echo '---------------------'
+    - uses: actions/checkout@v1
     - run: pwd
     - run: ls $GITHUB_WORKSPACE
-    - run: ls -lahR $HOME
