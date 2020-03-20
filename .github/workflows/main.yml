@@ -39,5 +39,5 @@ jobs:
         echo STEP TWO OF SECOND JOB
         echo '---------------------'
     - run: pwd
-    - run: echo $GITHUB_WORKSPACE
-    - run: echo $HOME
+    - run: ls $GITHUB_WORKSPACE
+    - run: ls -lahR $HOME
