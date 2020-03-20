@@ -2,6 +2,12 @@ name: Greeting from Mona
 
 on: push
 
+# on:
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
+
 jobs:
   my-job:
     name: My Job
@@ -27,7 +33,7 @@ jobs:
       run: |
         echo $MY_VAR $FIRST_NAME $LAST_NAME!
         echo END OF JOB
-        ls
+      run: ls
     - name: Step 2 of Second JOB
       run: |
         echo '---------------------'
