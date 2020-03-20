@@ -4,4 +4,4 @@ jobs:
   job-1:
     name: job 1
     steps:
-      echo asdf
+      - run: echo asdf
