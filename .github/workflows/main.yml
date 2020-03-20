@@ -27,8 +27,9 @@ jobs:
       run: |
         echo $MY_VAR $FIRST_NAME $LAST_NAME!
         echo END OF JOB
+        ls
     - name: Step 2 of Second JOB
-      run:
+      run: |
         echo '---------------------'
         echo STEP TWO OF SECOND JOB
         echo '---------------------'
