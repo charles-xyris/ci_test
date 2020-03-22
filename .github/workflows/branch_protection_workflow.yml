@@ -23,10 +23,8 @@ jobs:
       uses: actions/cache@v1
       with:
         path: /opt/hostedtoolcache/flutter
-        key: ubuntu-latest-flutter-${{ env.flutter_version }}
+        key: ubuntu-latest-flutter
     - uses: subosito/flutter-action@v1
-      with:
-        flutter-version: ${{ env.flutter_version }}
     - name: Install app dependencies
       run: flutter pub get
     - name: Run tests
