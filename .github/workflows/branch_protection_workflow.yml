@@ -1,7 +1,19 @@
+
 name: Branch Protection Workflow
 
+on:
+  pull_request:
+    # types: TODO
+    branches:
+      - master
+    # tags: TODO
+
 jobs:
-  job-1:
-    name: job 1
-    steps:
-      - run: echo asdf
+  build:
+    runs-on: ubuntu-latest
+  - uses: actions/checkout@v2
+  - uses: subosito/flutter-action@v1
+  - name: Install dependencies
+    run: flutter pub get
+  - name: Run tests
+    run: flutter test
