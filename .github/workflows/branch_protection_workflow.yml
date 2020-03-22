@@ -2,7 +2,6 @@
 name: Branch Protection Workflow
 
 env:
-  runner_os: "ubuntu-latest"
   flutter_version: "v1.12.13+hotfix.8"
 
 on:
@@ -17,15 +16,14 @@ on:
 
 jobs:
   flutter-test:
-    runs-on: {{ env.runner_os }}
-    timeout-minutes: 5
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Cache Flutter
       uses: actions/cache@v1
       with:
         path: /opt/hostedtoolcache/flutter
-        key: {{ env.runner_os}}-flutter-install-cache-${{ env.flutter_version }}
+        key: ubuntu-latest-flutter-${{ env.flutter_version }}
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: ${{ env.flutter_version }}
