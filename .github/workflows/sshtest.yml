@@ -1,0 +1,22 @@
+
+name: MacOS Test
+
+env:
+  flutter_version: "v1.12.13+hotfix.8"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-macos:
+    name: Test and build on macos
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+    - uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.runnerkey }}
+        known_hosts: ${{ secrets.knownhosts }}
+    - run: git clone git@github.com:charles-xyris/privtest.git
