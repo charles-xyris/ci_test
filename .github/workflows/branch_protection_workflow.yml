@@ -15,7 +15,7 @@ on:
       - master
 
 jobs:
-  flutter-test:
+  Flutter Tests:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
@@ -30,5 +30,3 @@ jobs:
       run: flutter pub get
     - name: Run tests
       run: flutter test
-    - name: Build apk
-      run: flutter build apk
