@@ -1,5 +1,5 @@
 
-name: Branch Protection Workflow
+name: MacOS Test
 
 env:
   flutter_version: "v1.12.13+hotfix.8"
