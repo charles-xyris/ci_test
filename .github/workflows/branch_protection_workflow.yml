@@ -15,7 +15,7 @@ on:
       - master
 
 jobs:
-  test:
+  flutter-test:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
