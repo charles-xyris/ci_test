@@ -1,5 +1,5 @@
 
-name: MacOS Test
+name: sshtest
 
 env:
   flutter_version: "v1.12.13+hotfix.8"
