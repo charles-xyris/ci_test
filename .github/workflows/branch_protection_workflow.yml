@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: /opt/hostedtoolcache/flutter
-          key: ubuntu-latest-flutter-${{env.flutter_version}}
+          key: ubuntu-latest-flutter-${{env.flutter_version}}-test
       - uses: subosito/flutter-action@v1
   flutter-test:
     timeout-minutes: 5
@@ -35,7 +35,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: /opt/hostedtoolcache/flutter
-        key: ubuntu-latest-flutter-${{env.flutter_version}}
+        key: ubuntu-latest-flutter-${{env.flutter_version}}-test
     - uses: subosito/flutter-action@v1
     - name: Install app dependencies
       run: flutter pub get
