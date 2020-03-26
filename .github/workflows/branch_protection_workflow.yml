@@ -15,6 +15,17 @@ on:
       - master
 
 jobs:
+  setup:
+    name: Setup flutter environment
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Flutter
+        uses: actions/cache@v1
+        with:
+          path: /opt/hostedtoolcache/flutter
+          key: ubuntu-latest-flutter-${{env.flutter_version}}
+      - uses: subosito/flutter-action@v1
   flutter-test:
     timeout-minutes: 5
     runs-on: ubuntu-latest
